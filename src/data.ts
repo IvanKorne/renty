@@ -1,3 +1,5 @@
+import { Fuel, Car, Armchair } from "lucide-react";
+import React from "react";
 export const headerButtons = [
   {
     name: "Home",
@@ -10,5 +12,23 @@ export const headerButtons = [
   {
     name: "Contact Us",
     link: "mailto:ikorney@uwaterloo.ca",
+  },
+] as const;
+
+export const CardIcons = [
+  {
+    name: "",
+    icon: React.createElement(Car),
+    value: "carType",
+  },
+  {
+    name: "Seat",
+    icon: React.createElement(Armchair),
+    value: "seat",
+  },
+  {
+    name: "MPG",
+    icon: React.createElement(Fuel),
+    value: "mpg",
   },
 ] as const;
