@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Toaster } from "sonner";
 import { ClerkProvider, SignIn, SignedIn, SignedOut } from "@clerk/nextjs";
 import "./globals.css";
 import Nav from "./_components/Nav";
@@ -24,6 +24,7 @@ export default function RootLayout({
           <SignedIn>
             <Nav />
             {children}
+            <Toaster />
           </SignedIn>
           <SignedOut>
             <SignIn />

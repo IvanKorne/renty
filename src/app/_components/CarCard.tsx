@@ -5,26 +5,26 @@ import { ArrowRight } from "lucide-react";
 
 const CarCard = ({ car }: any) => {
   return (
-    <div className="group bg-gray-50 p-2 hover:bg-white hover:border-[1px] cursor-pointer duration border-blue-500 rounded-xl m-5">
-      <h2 className="text-xl font-bold  mb-2">{car.name}</h2>
+    <div className="group bg-gray-50 p-3 hover:bg-white hover:border-[1px] cursor-pointer duration border-blue-500 rounded-xl m-5 ">
+      <h2 className="text-xl font-bold  mb-2">{car?.name}</h2>
       <h2 className="text-3xl font-semibold mb-2 ">
         <span className="text-sm font-light">$</span>
-        {car.price}
+        {car?.price}
         <span className="text-sm font-light"> /day</span>
       </h2>
       <Image
-        src={car.image?.url}
+        src={car?.image?.url}
         alt="car"
         width={220}
         height={200}
-        className="w-[250px] h-[150px] mb-3 object-contain"
+        className="w-[250px] h-[150px] mb-3 object-contain ml-8"
       />
       <div className="flex justify-around group-hover:hidden transition">
         {CardIcons.map((c, i) => (
           <div key={i} className="text-gray-500 text-center ">
             <div className="text-xl mb-2 w-full ml-[6px]">{c.icon}</div>
             <h2 className="line-clamp-5 text-[14px] font-semibold">
-              {car[c.value]} {c.name}
+              {car && car[c.value]} {c.name}
             </h2>
           </div>
         ))}

@@ -20,7 +20,6 @@ const Search = () => {
           <div className="flex items-center">
             <input
               type="Date"
-              placeholder=""
               className="p-2 outline-none bg-transparent text-gray-400"
             />
           </div>

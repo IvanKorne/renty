@@ -1,5 +1,15 @@
 import { Fuel, Car, Armchair } from "lucide-react";
 import React from "react";
+
+export const defaultForm = {
+  location: "",
+  pickupDate: "",
+  dropoffDate: "",
+  pickupTime: "",
+  dropoffTime: "",
+  contact: "",
+  carId: { connect: { id: "" } },
+};
 export const headerButtons = [
   {
     name: "Home",
