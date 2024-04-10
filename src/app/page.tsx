@@ -10,7 +10,6 @@ export default function Home() {
   const [carsList, setCarsList] = useState<any>();
   const [loading, setLoading] = useState(false);
   const [carsOrgList, setCarsOrgList] = useState<any>();
-  const [brand, setBrand] = useState<string>();
   const getCarList = async () => {
     setLoading(true);
     const result: any = await getCars();

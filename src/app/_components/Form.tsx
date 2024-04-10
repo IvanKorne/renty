@@ -28,7 +28,7 @@ const Form = ({ car }: any) => {
   };
 
   const handleSubmit = async () => {
-    const response = await createBooking({ formValues });
+    await createBooking({ formValues });
     toast("Successfuly Booked!");
   };
   return (
