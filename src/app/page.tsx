@@ -14,14 +14,12 @@ export default function Home() {
   const getCarList = async () => {
     setLoading(true);
     const result: any = await getCars();
-    console.log(result.carLists);
     setCarsList(result?.carLists);
     setCarsOrgList(result?.carLists);
     setLoading(false);
   };
 
   const filterCarList = (brand: string) => {
-    console.log(brand);
     const newCars = carsOrgList.filter((car: any) => car.carBrand == brand);
     setCarsList(newCars);
   };

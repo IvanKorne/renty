@@ -10,7 +10,6 @@ const Form = ({ car }: any) => {
   const [formValues, setFormValues] = useState(defaultForm);
   const getStores = async () => {
     const response: any = await getStoreLocations();
-    console.log(response);
     setLocations(response.storeLocations);
   };
 
@@ -29,7 +28,6 @@ const Form = ({ car }: any) => {
   };
 
   const handleSubmit = async () => {
-    console.log(formValues);
     const response = await createBooking({ formValues });
     toast("Successfuly Booked!");
   };

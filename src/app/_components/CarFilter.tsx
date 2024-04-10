@@ -10,7 +10,6 @@ const CarFilter = ({ carsList, setBrand, orderList }: any) => {
     carsList.forEach((c: any) => {
       BrandSet.add(c.carBrand);
     });
-    console.log(BrandSet);
     setBrandList(Array.from(BrandSet));
   };
 
